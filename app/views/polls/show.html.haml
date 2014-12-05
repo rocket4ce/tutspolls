@@ -1,0 +1,6 @@
+%h1= @poll.title
+
+%p.btn-group
+  = link_to "Editar", edit_poll_path(@poll), class: "btn btn-default"
+  = link_to "Volver", polls_path, class: "btn btn-default"
+  = link_to "Añadir pregunta", new_poll_question_path(@poll), class: "btn btn-default"

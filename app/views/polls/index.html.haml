@@ -1,0 +1,12 @@
+%h1 Listing polls
+%ul
+  - @polls.each do |poll|
+    %li
+      = link_to poll.title, poll
+      |
+      = link_to "Editar", edit_poll_path(poll), class: "btn btn-default"
+      = link_to "Volver", polls_path, class: "btn btn-default"
+      = link_to "Añadir pregunta", new_poll_question_path(poll), class: "btn btn-default"
+      
+
+%p= link_to 'New Poll', new_poll_path, class: "btn btn-primary"
